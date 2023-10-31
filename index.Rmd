@@ -27,7 +27,7 @@ Hello World.
 ## local image 
 Central Park in Fall
 
-img src="images/leaves.jpg" style="width:75%"
+<img src="image/leaves.jpg" style="width:75%">
 
 ## internal website 
 * [about](about.html)
