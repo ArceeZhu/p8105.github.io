@@ -4,7 +4,8 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
+    code_folding: hide
+    theme: cosmo
 ---
 
 # This is Arcee's awesome website
@@ -31,6 +32,27 @@ Central Park in Fall
 
 ## internal website 
 * [about](about.html)
+
+## Code
+```{r}
+rnorm(5,mean = 3,sd=2)
+```
+
+
+
+## My experience {.tabset}
+
+### China
+
+Guangzhou-South China Normal Unviersity 
+
+### The US 
+
+New York-168th street 
+
+
+## Next step
+where? 
 
 
 
