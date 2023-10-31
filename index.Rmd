@@ -1,0 +1,38 @@
+---
+title: "My awesome website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# This is Arcee's awesome website
+
+![](https://giphy.com/clips/sad-elmo-alexandrelouvenaz-9TY7wo0BxV7uPdZVpG)
+
+![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+
+## Text
+
+Hello World. 
+
+## Links to website
+
+* [p8105](https://p8105.com/)
+
+* [google](http://google.com)
+
+
+## local image 
+Central Park in Fall
+
+img src="images/leaves.jpg" style="width:75%"
+
+## internal website 
+* [about](about.html)
+
+
+
+
+
