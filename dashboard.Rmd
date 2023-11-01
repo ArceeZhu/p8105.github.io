@@ -1,23 +1,23 @@
 ---
-title: "plotly"
+title: "dashboard"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
-
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+    theme: cosmo
+  
 ---
 
-# There are some plotly examples
+```{r setup, include=FALSE}
+library(flexdashboard)
 
-```{r set up}
 library (p8105.datasets)
 library (tidyverse)
-
 library (plotly)
 ```
 
-
-```{r tidy up dataset }
+```{r}
 data("nyc_airbnb")
 nyc_airbnb = 
   nyc_airbnb |> 
@@ -32,7 +32,12 @@ nyc_airbnb =
 ```
 
 
-```{r make the plot }
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Scatterplot
+
+```{r scatterplot}
 nyc_airbnb |>
   mutate(text_label = str_c("Price: $", price, "\nRating: ", rating)) |> 
   plot_ly(
@@ -40,8 +45,12 @@ nyc_airbnb |>
     color = ~rating, text=~text_label, alpha = 0.5)
 ```
 
-## boxplot 
-```{r}
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### boxplot
+
+```{r boxplot}
 nyc_airbnb %>% 
   mutate(neighbourhood = fct_reorder(neighbourhood,price )) %>% 
   plot_ly(y=~price,
@@ -50,8 +59,7 @@ nyc_airbnb %>%
           colors = "viridis")
 ```
 
-
-## barcode
+### barcode
 
 ```{r}
 nyc_airbnb %>% 
